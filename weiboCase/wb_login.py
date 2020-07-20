@@ -117,8 +117,8 @@ def login(account, password):
     page.encoding = "GBK"
     url = re.search('location\.replace\([\'"](.*?)[\'"]\)', page.text).group(1)
     page = r.post(url, data=data)
-    print(page.cookies)
-    print(requests.utils.dict_from_cookiejar(page.cookies))
+    print(r.cookies)
+    print(requests.utils.dict_from_cookiejar(r.cookies))
     params = (
         ('customer_id', '6135567862'),
         ('startTime', '2020-07-19'),
