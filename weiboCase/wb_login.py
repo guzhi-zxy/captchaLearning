@@ -17,7 +17,7 @@ import execjs
 import requests
 
 html_str = ''
-with open("./test3.js", 'r', encoding='utf-8') as f:
+with open("./wb_password.js", 'r', encoding='utf-8') as f:
     for line in f:
         html_str += line
 ctx = execjs.compile(html_str)  # 加载JS文件
